@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite"  parallel="none" thread-count="1">
+    <parameter name="browserName" value="Chrome"></parameter>
+    <test verbose="2" preserve-order="true" name="C:/Users/kiran/IdeaProjects/XYZBank_Automation">
+        <classes>
+            <class name="com.test.XYZBankTest">
+                <methods>
+                    <include name="GetCurrentTitle"/>
+                    <include name="CoustomerLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
