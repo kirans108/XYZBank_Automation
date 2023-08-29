@@ -6,7 +6,7 @@
       <class name="com.test.XYZBankTest">
         <methods>
           <include name="TearDown"/>
-          <include name="openacc"/>
+          <include name="setWithdrawl"/>
           <include name="initialise"/>
         </methods>
       </class> <!-- com.test.XYZBankTest -->

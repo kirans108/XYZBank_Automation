@@ -15,7 +15,6 @@
                     <include name="customers"/>
                     <include name="openacc"/>
                     <include name="setSearch"/>
-                    <include name="setTakeScreenshot"/>
                 </methods>
             </class>
         </classes>
