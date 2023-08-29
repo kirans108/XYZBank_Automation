@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-29T13:20:09 IST" name="Default Suite" finished-at="2023-08-29T13:20:40 IST" duration-ms="30691">
+  <suite started-at="2023-08-29T18:33:33 IST" name="Default Suite" finished-at="2023-08-29T18:34:00 IST" duration-ms="26395">
     <groups>
     </groups>
-    <test started-at="2023-08-29T13:20:09 IST" name="XYZBank_Automation" finished-at="2023-08-29T13:20:40 IST" duration-ms="30691">
-      <class name="com.test.XYZBankTest">
-        <test-method is-config="true" signature="initialise(java.lang.String)[pri:0, instance:com.test.XYZBankTest@346d61be]" started-at="2023-08-29T13:20:09 IST" name="initialise" finished-at="2023-08-29T13:20:19 IST" duration-ms="10019" status="PASS">
+    <test started-at="2023-08-29T18:33:33 IST" name="XYZBank_Automation" finished-at="2023-08-29T18:34:00 IST" duration-ms="26395">
+      <class name="com.test.CustomerLoginTest">
+        <test-method is-config="true" signature="initialise(java.lang.String)[pri:0, instance:com.test.CustomerLoginTest@6631f5ca]" started-at="2023-08-29T18:33:33 IST" name="initialise" finished-at="2023-08-29T18:33:44 IST" duration-ms="10694" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,51 +18,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialise -->
-        <test-method signature="GetCurrentTitle()[pri:0, instance:com.test.XYZBankTest@346d61be]" started-at="2023-08-29T13:20:19 IST" name="GetCurrentTitle" finished-at="2023-08-29T13:20:19 IST" duration-ms="182" status="PASS">
+        <test-method signature="GetCurrentTitle()[pri:0, instance:com.test.CustomerLoginTest@6631f5ca]" started-at="2023-08-29T18:33:44 IST" name="GetCurrentTitle" finished-at="2023-08-29T18:33:44 IST" duration-ms="69" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetCurrentTitle -->
-        <test-method signature="CoustomerLogin()[pri:1, instance:com.test.XYZBankTest@346d61be]" started-at="2023-08-29T13:20:19 IST" name="CoustomerLogin" finished-at="2023-08-29T13:20:22 IST" duration-ms="3001" status="PASS">
+        <test-method signature="CoustomerLogin()[pri:1, instance:com.test.CustomerLoginTest@6631f5ca]" started-at="2023-08-29T18:33:44 IST" name="CoustomerLogin" finished-at="2023-08-29T18:33:48 IST" duration-ms="3969" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CoustomerLogin -->
-        <test-method signature="setDepositAmount()[pri:2, instance:com.test.XYZBankTest@346d61be]" started-at="2023-08-29T13:20:22 IST" name="setDepositAmount" finished-at="2023-08-29T13:20:25 IST" duration-ms="3172" status="PASS">
+        <test-method signature="setDepositAmount()[pri:2, instance:com.test.CustomerLoginTest@6631f5ca]" started-at="2023-08-29T18:33:48 IST" name="setDepositAmount" finished-at="2023-08-29T18:33:52 IST" duration-ms="3543" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDepositAmount -->
-        <test-method signature="setTransactions()[pri:3, instance:com.test.XYZBankTest@346d61be]" started-at="2023-08-29T13:20:25 IST" name="setTransactions" finished-at="2023-08-29T13:20:30 IST" duration-ms="4247" status="PASS">
+        <test-method signature="setTransactions()[pri:3, instance:com.test.CustomerLoginTest@6631f5ca]" started-at="2023-08-29T18:33:52 IST" name="setTransactions" finished-at="2023-08-29T18:33:56 IST" duration-ms="4261" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setTransactions -->
-        <test-method signature="setWithdrawl()[pri:4, instance:com.test.XYZBankTest@346d61be]" started-at="2023-08-29T13:20:30 IST" name="setWithdrawl" finished-at="2023-08-29T13:20:34 IST" duration-ms="4666" status="PASS">
+        <test-method signature="setWithdrawl()[pri:4, instance:com.test.CustomerLoginTest@6631f5ca]" started-at="2023-08-29T18:33:56 IST" name="setWithdrawl" finished-at="2023-08-29T18:33:59 IST" duration-ms="3392" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setWithdrawl -->
-        <test-method signature="logout()[pri:5, instance:com.test.XYZBankTest@346d61be]" started-at="2023-08-29T13:20:34 IST" name="logout" finished-at="2023-08-29T13:20:35 IST" duration-ms="344" status="PASS">
+        <test-method signature="logout()[pri:5, instance:com.test.CustomerLoginTest@6631f5ca]" started-at="2023-08-29T18:33:59 IST" name="logout" finished-at="2023-08-29T18:34:00 IST" duration-ms="240" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method signature="managerlogin()[pri:6, instance:com.test.XYZBankTest@346d61be]" started-at="2023-08-29T13:20:35 IST" name="managerlogin" finished-at="2023-08-29T13:20:37 IST" duration-ms="2294" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- managerlogin -->
-        <test-method signature="customers()[pri:7, instance:com.test.XYZBankTest@346d61be]" started-at="2023-08-29T13:20:37 IST" name="customers" finished-at="2023-08-29T13:20:38 IST" duration-ms="674" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- customers -->
-        <test-method signature="openacc()[pri:8, instance:com.test.XYZBankTest@346d61be]" started-at="2023-08-29T13:20:38 IST" name="openacc" finished-at="2023-08-29T13:20:39 IST" duration-ms="1291" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openacc -->
-        <test-method signature="setSearch()[pri:9, instance:com.test.XYZBankTest@346d61be]" started-at="2023-08-29T13:20:39 IST" name="setSearch" finished-at="2023-08-29T13:20:39 IST" duration-ms="433" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setSearch -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:com.test.XYZBankTest@346d61be]" started-at="2023-08-29T13:20:39 IST" name="TearDown" finished-at="2023-08-29T13:20:40 IST" duration-ms="173" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TearDown -->
-      </class> <!-- com.test.XYZBankTest -->
+      </class> <!-- com.test.CustomerLoginTest -->
     </test> <!-- XYZBank_Automation -->
   </suite> <!-- Default Suite -->
 </testng-results>

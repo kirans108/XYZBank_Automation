@@ -6,7 +6,6 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 
 import java.awt.*;
 
@@ -81,12 +80,11 @@ public class Manager_Login {
         submit.click();
         driver.switchTo().alert().accept();
     }
-    public  void customers() throws AWTException {
+    public String customers() throws AWTException {
         Customers.click();
         coustomerName.sendKeys("Hermoine");
         String search=searchresult.getText();
-        Assert.assertEquals(search,"Hermoine");
-
+        return search;
     }
     public void openacc(){
         openacount.click();
@@ -101,10 +99,11 @@ public class Manager_Login {
         submit1.click();
         driver.switchTo().alert().accept();
     }
-    public void search(){
+    public String search(){
         searchtab.click();
         SearchCustomer.sendKeys("Hermoine");
         String search2=search.getText();
-        Assert.assertEquals(search2,"Hermoine");
+
+        return search2;
     }
 }

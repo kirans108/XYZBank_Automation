@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="XYZBank_Automation(failed)">
     <classes>
-      <class name="com.test.XYZBankTest">
+      <class name="com.test.CustomerLoginTest">
         <methods>
           <include name="TearDown"/>
           <include name="setWithdrawl"/>
           <include name="initialise"/>
         </methods>
-      </class> <!-- com.test.XYZBankTest -->
+      </class> <!-- com.test.CustomerLoginTest -->
     </classes>
   </test> <!-- XYZBank_Automation(failed) -->
 </suite> <!-- Failed suite [Default Suite] -->

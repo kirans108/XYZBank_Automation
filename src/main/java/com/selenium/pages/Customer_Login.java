@@ -1,15 +1,11 @@
 package com.selenium.pages;
 
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 
 import java.io.File;
 import java.io.IOException;
@@ -74,10 +70,9 @@ public class Customer_Login {
         PageFactory.initElements(driver, this);
 
     }
-    public void currentTitle() {
+    public String currentTitle() {
         String currenttitle = driver.getTitle();
-        System.out.println(currenttitle);
-        Assert.assertEquals(currenttitle, "XYZ Bank");
+        return currenttitle;
     }
     public void customerlogin() throws InterruptedException {
         coustomerlogin.click();
@@ -88,36 +83,40 @@ public class Customer_Login {
         submitbtn.click();
     }
 
-    public void depositAmount() throws InterruptedException, IOException {
+    public String depositAmount() throws InterruptedException, IOException {
         Depositbutton.click();
         Thread.sleep(2000);
         Amount.sendKeys("100");
         submit.click();
-        String dp = DepositSuccess.getText();
-        Assert.assertEquals(dp, "Deposit Successful");
+
+        String dp = driver.findElement(By.xpath("//span[@class='error ng-binding']")).getText();
+
         TakesScreenshot screenshot=(TakesScreenshot) driver;
         File ss=screenshot.getScreenshotAs(OutputType.FILE);
         File destination= new File("C:\\Users\\kiran\\IdeaProjects\\XYZBank_Automation\\src\\main\\resources\\srcshot1.jpg");
         FileHandler.copy(ss,destination);
+        return dp;
     }
 
-    public void transactions() throws InterruptedException {
+    public String transactions() throws InterruptedException {
         Thread.sleep(2000);
         transaction.click();
         Thread.sleep(2000);
         String cr = credit.getText();
-        Assert.assertEquals(cr, "Credit");
+
         Back.click();
+        return cr;
     }
 
-    public void withdrawl() throws InterruptedException {
+    public String withdrawl() throws InterruptedException {
         Thread.sleep(2000);
         withdrawlbutton.click();
         amount.sendKeys("50");
         submit1.click();
         //Transaction successful
         String tr = transactionsuccess.getText();
-        Assert.assertEquals(tr, "Withdraw");
+
+        return tr;
     }
     public  void LogOut(){
         logoutbutn.click();
