@@ -28,8 +28,8 @@ public class ManagerLoginTest extends BaseClass {
         Assert.assertEquals(search,"Hermoine");
     }
     @Test(priority = 2)
-    public void openacc(){
-        managerLogin.openacc();
+    public void openAccount(){
+        managerLogin.openacount();
     }
 
     @Test(priority = 3)
@@ -37,7 +37,6 @@ public class ManagerLoginTest extends BaseClass {
         String search2=managerLogin.search();
         Assert.assertEquals(search2,"Hermoine");
     }
-
     @AfterTest
     public void TearDown(){
         driver.close();

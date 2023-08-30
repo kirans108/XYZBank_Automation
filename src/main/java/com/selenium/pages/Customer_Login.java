@@ -20,17 +20,16 @@ public class Customer_Login {
     WebElement username;
     @CacheLookup
     @FindBy(xpath = "//button[@type='submit']")
-    WebElement submitbtn;
+    WebElement submitbutton;
     @CacheLookup
     @FindBy(xpath = "//button[normalize-space()='Deposit']")
-    WebElement Depositbutton;
+    WebElement depositbutton;
     @CacheLookup
     @FindBy(xpath = "//input[@ng-model='amount']")
     WebElement Amount;
     @CacheLookup
     @FindBy(xpath = "//button[@type='submit']")
     WebElement submit;
-
     @CacheLookup
     @FindBy(xpath = "//span[@class='error ng-binding']")
     WebElement DepositSuccess;
@@ -40,13 +39,12 @@ public class Customer_Login {
     @CacheLookup
     @FindBy(xpath = "//td[normalize-space()='Credit']")
     WebElement credit;
-
     @CacheLookup
     @FindBy(xpath = "//button[normalize-space()='Back']")
     WebElement Back;
     @CacheLookup
     @FindBy(xpath = "//button[@ng-class='btnClass3']")
-    WebElement withdrawlbutton;
+    WebElement radiobutton;
 
     @CacheLookup
     @FindBy(xpath = "//input[@placeholder='amount']")
@@ -80,43 +78,37 @@ public class Customer_Login {
         username.click();
         Select select = new Select(username);
         select.selectByVisibleText("Neville Longbottom");
-        submitbtn.click();
+        submitbutton.click();
     }
 
     public String depositAmount() throws InterruptedException, IOException {
-        Depositbutton.click();
+        depositbutton.click();
         Thread.sleep(2000);
         Amount.sendKeys("100");
         submit.click();
-
-        String dp = driver.findElement(By.xpath("//span[@class='error ng-binding']")).getText();
-
+        String deposit = DepositSuccess.getText();
         TakesScreenshot screenshot=(TakesScreenshot) driver;
         File ss=screenshot.getScreenshotAs(OutputType.FILE);
         File destination= new File("C:\\Users\\kiran\\IdeaProjects\\XYZBank_Automation\\src\\main\\resources\\srcshot1.jpg");
         FileHandler.copy(ss,destination);
-        return dp;
+        return deposit;
     }
-
     public String transactions() throws InterruptedException {
         Thread.sleep(2000);
         transaction.click();
         Thread.sleep(2000);
-        String cr = credit.getText();
-
+        String creditText = credit.getText();
         Back.click();
-        return cr;
+        return creditText;
     }
-
-    public String withdrawl() throws InterruptedException {
+    public String withdrawal() throws InterruptedException {
         Thread.sleep(2000);
-        withdrawlbutton.click();
+        radiobutton.click();
         amount.sendKeys("50");
         submit1.click();
         //Transaction successful
-        String tr = transactionsuccess.getText();
-
-        return tr;
+        String transactionsuccessText = transactionsuccess.getText();
+        return transactionsuccessText;
     }
     public  void LogOut(){
         logoutbutn.click();

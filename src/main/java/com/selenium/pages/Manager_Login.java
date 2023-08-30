@@ -14,23 +14,18 @@ public class Manager_Login {
     @CacheLookup
     @FindBy(xpath = "//button[text()='Bank Manager Login']")
     WebElement login;
-
     @CacheLookup
     @FindBy(xpath = "//button[normalize-space()='Add Customer']")
     WebElement AddCustomer;
-
     @CacheLookup
     @FindBy(xpath = "//input[@placeholder='First Name']")
     WebElement FirstName;
-
     @CacheLookup
     @FindBy(xpath = "//input[@placeholder='Last Name']")
     WebElement LastName;
-
     @CacheLookup
     @FindBy(xpath = "//input[@placeholder='Post Code']")
     WebElement PostCode;
-
     @CacheLookup
     @FindBy(xpath = "//button[@type='submit']")
     WebElement submit;
@@ -43,7 +38,6 @@ public class Manager_Login {
     @CacheLookup
     @FindBy(xpath = "//td[text()='Hermoine']")
     WebElement searchresult;
-
     @CacheLookup
     @FindBy(xpath = "//button[@ng-class='btnClass2']")
     WebElement openacount;
@@ -68,7 +62,6 @@ public class Manager_Login {
     public  Manager_Login( WebDriver driver) {
         this.driver=driver;
         PageFactory.initElements(driver,this);
-
     }
     public void managerlogin(/*String first,String last,String pincode*/){
         login.click();
@@ -86,16 +79,14 @@ public class Manager_Login {
         String search=searchresult.getText();
         return search;
     }
-    public void openacc(){
+    public void openacount(){
         openacount.click();
         coustomername.click();
         Select select1 = new Select(coustomername);
         select1.selectByVisibleText("Harry Potter");
-
         currency.click();
         Select select2=new Select(currency);
         select2.selectByVisibleText("Rupee");
-
         submit1.click();
         driver.switchTo().alert().accept();
     }
@@ -103,7 +94,6 @@ public class Manager_Login {
         searchtab.click();
         SearchCustomer.sendKeys("Hermoine");
         String search2=search.getText();
-
         return search2;
     }
 }
